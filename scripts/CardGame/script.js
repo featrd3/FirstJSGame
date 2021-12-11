@@ -82,9 +82,10 @@ function updateDeckCount() {
 function flipCards(){
     inRound = true
 
+    /*
     console.log(computerDeck.cards)
     console.log(playerDeck.cards)
-
+    */
     const playerCard = playerDeck.pop()
     const computerCard = computerDeck.pop()
 
@@ -118,38 +119,39 @@ function drawHandling(computerCard,playerCard){
     const computerCardDrawHid = computerDeck.pop()
 
     checkGameOver(playerDeck,computerDeck)
+    if(!stop){
 
-    const playerCardDraw = playerDeck.pop()
-    const computerCardDraw = computerDeck.pop()
+        const playerCardDraw = playerDeck.pop()
+        const computerCardDraw = computerDeck.pop()
 
-    playerDrawHiddenSlot.appendChild(playerCardDrawHid.getHTML())
-    computerDrawHiddenSlot.appendChild(computerCardDrawHid.getHTML())
-    playerDrawSlot.appendChild(playerCardDraw.getHTML())
-    computerDrawSlot.appendChild(computerCardDraw.getHTML())
+        playerDrawHiddenSlot.appendChild(playerCardDrawHid.getHTML())
+        computerDrawHiddenSlot.appendChild(computerCardDrawHid.getHTML())
+        playerDrawSlot.appendChild(playerCardDraw.getHTML())
+        computerDrawSlot.appendChild(computerCardDraw.getHTML())
 
-    updateDeckCount() 
+        updateDeckCount() 
 
-    if (isRoundWinner(playerCardDraw, computerCardDraw)){
-        text.innerText = "Draw-Win"
-        playerDeck.push(playerCardDrawHid)
-        playerDeck.push(computerCardDrawHid)
-        playerDeck.push(playerCardDraw)
-        playerDeck.push(computerCardDraw)
-        playerDeck.push(playerCard)
-        playerDeck.push(computerCard)
-    } else if (isRoundWinner(computerCardDraw, playerCardDraw)){
-        text.innerText = "Draw-Lose"
-        computerDeck.push(playerCardDrawHid)
-        computerDeck.push(computerCardDrawHid)
-        computerDeck.push(playerCardDraw)
-        computerDeck.push(computerCardDraw)
-        computerDeck.push(playerCard)
-        computerDeck.push(computerCard)
-    } else{
-        drawHandling(computerCard,playerCard)
+        if (isRoundWinner(playerCardDraw, computerCardDraw)){
+            text.innerText = "Draw-Win"
+            playerDeck.push(playerCardDrawHid)
+            playerDeck.push(computerCardDrawHid)
+            playerDeck.push(playerCardDraw)
+            playerDeck.push(computerCardDraw)
+            playerDeck.push(playerCard)
+            playerDeck.push(computerCard)
+        } else if (isRoundWinner(computerCardDraw, playerCardDraw)){
+            text.innerText = "Draw-Lose"
+            computerDeck.push(playerCardDrawHid)
+            computerDeck.push(computerCardDrawHid)
+            computerDeck.push(playerCardDraw)
+            computerDeck.push(computerCardDraw)
+            computerDeck.push(playerCard)
+            computerDeck.push(computerCard)
+        } else{
+            drawHandling(computerCard,playerCard)
+        }
     }
     
-
 }
 
 function checkGameOver(playerDeck,computerDeck){

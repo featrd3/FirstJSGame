@@ -41,6 +41,10 @@ body{
     background-color: blue;
 }
 
+.card-slot{
+    overflow-y:auto;
+}
+
 .card{
     position: relative;
     height: 100%;
@@ -51,6 +55,7 @@ body{
     font-size: 4rem;
     justify-content: center;
     align-items: center;
+    
 }
 
 .card.red{
