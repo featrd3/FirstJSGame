@@ -5,8 +5,6 @@ const ProgressBar = ({ bgcolor, current }) => {
       height: 20,
       width: '100%',
       backgroundColor: "#e0e0de",
-      borderRadius: 50,
-      margin: 50
     }
   
     const fillerStyles = {
@@ -18,7 +16,6 @@ const ProgressBar = ({ bgcolor, current }) => {
     }
   
     const labelStyles = {
-      padding: 5,
       color: 'white',
       fontWeight: 'bold'
     }

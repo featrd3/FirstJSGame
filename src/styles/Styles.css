@@ -15,17 +15,40 @@
 }
 
 .scene{
+
+}
+.battleground{
     display: grid;
     grid-template-columns: 50% 50%;
-    
+    width: 100%;
 }
 
 .team{
-
+    padding: 5px;
 }
 
 .character{
+ width:100%;
+ padding: 5px;
+ margin: 5px;
+}
 
+.active .character{
+    background-color: burlywood;
+}
+
+.status{
+    background-color: cadetblue;
+    padding: 10px;
+}
+
+.characterModel{
+    background-color: black;
+    margin: 5px;
+    height: 100px;
+    min-height: 10px;
+    min-width: 10px;
+    max-width: 20%;
 }
 
 .hpBarBackground{
