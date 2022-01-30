@@ -1,17 +1,16 @@
 import React from 'react'
 import Team from './Team'
-import TurnOrder from './TurnOrder'
 
 
-const Scene = ({ teamLeft, teamRight }) => {
+
+const Scene = ({ teamLeft, teamRight , turnOrder }) => {
 
 
     return (
       <div className = "scene">
-        <TurnOrder />
         <div className = "battleground">
-          <Team team = {teamLeft}/>
-          <Team team = {teamRight}/>
+          <Team team = {teamLeft} turnOrder = {turnOrder}/>
+          <Team team = {teamRight} turnOrder = {turnOrder}/>
         </div>
       </div>
     )

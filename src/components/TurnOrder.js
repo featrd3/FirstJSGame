@@ -1,11 +1,12 @@
-import React from 'react'
+import { useState } from "react"
 
-const TurnOrder = ({  }) => {
 
+const TurnOrder = ({ onClick, turnOrder }) => {
 
     return (
-      <div className = "turnTable">
-        Turn
+      <div className = "turnTable" >
+        {turnOrder}
+        <button onClick={onClick}>Text</button>
       </div>
     )
 }

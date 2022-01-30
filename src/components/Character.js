@@ -4,13 +4,11 @@ import CharacterModel from './CharacterModel'
 import BonusBar from './BonusBar'
 
 
-const Character = ({ character }) => {
-
+const Character = ({ character, turnOrder }) => {
 
     return (
-      <div className = {`${character.isActive ? 'active':''}`}>
+      <div className = {`${character.id == turnOrder[0] ? 'active':''}`}>
       <div className = "character">
-        
 
           <div className = "status">
           <HpBar currentHP = {character.currentHp} maxHP = {character.maxHp} hpLimits={character.hpLimits}/>
