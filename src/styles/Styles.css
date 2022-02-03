@@ -59,3 +59,15 @@ margin:10px;
 .hpBarCurrent{
     background-color: rgb(0, 128, 0);
 }
+
+.actionsBorder{
+    margin: 30px auto;
+    overflow: auto;
+    border: 1px solid rgb(57, 156, 236);
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.actionsTable{
+    background-color: rgb(75, 77, 75);
+}

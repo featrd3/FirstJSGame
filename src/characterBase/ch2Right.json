@@ -1,0 +1,14 @@
+{
+    "name": "ch2 Right",
+    "model": "purple",
+
+    "maxHp": 102,
+    "currentHp": 50,
+    "hpLimits": [33.33,66.66],
+
+    "speed": 2,
+    "attack": 10,
+    "bonus": 50,
+    "bonusColor": "white"
+
+}

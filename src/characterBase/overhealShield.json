@@ -1,0 +1,14 @@
+{
+    "name": "overhealShield",
+    "model": "red",
+
+    "maxHp": 100,
+    "currentHp": 110,
+    "hpLimits": [33.33,66.66],
+
+    "speed": 3,
+    "attack": 10,
+    "bonus": 10,
+    "bonusColor": "blue"
+
+}

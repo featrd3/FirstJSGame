@@ -1,0 +1,13 @@
+{
+    "name": "ch1 Right",
+    "model": "blue",
+
+    "maxHp": 90,
+    "currentHp": 10,
+    "hpLimits": [33.33,66.66],
+
+    "speed": 5,
+    "attack": 10,
+    "bonus": 50,
+    "bonusColor": "black"
+}
