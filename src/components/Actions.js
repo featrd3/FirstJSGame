@@ -1,5 +1,4 @@
-import { useState } from "react"
-
+import Action from "./Action";
 
 const Actions = ({ teamLeft, teamRight, turnOrder}) => {
 
@@ -8,16 +7,14 @@ const Actions = ({ teamLeft, teamRight, turnOrder}) => {
 
     return (
         <div className="actionsBorder">
-            <div className = "actionsTable" >
-
-
-                {activeChar.name}
-
-
-            </div>
-      </div>
+                
+           {activeChar.actions.map((action) => <Action key = {action} action = {action} teamLeft = {teamLeft} teamRight = {teamRight} />)}
+            
+        </div>
     )
 }
+
+
 
 
 

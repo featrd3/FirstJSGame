@@ -9,6 +9,8 @@
     "speed": 3,
     "attack": 10,
     "bonus": 10,
-    "bonusColor": "blue"
+    "bonusColor": "blue",
+
+    "actions": ["attack", "block"]
 
 }

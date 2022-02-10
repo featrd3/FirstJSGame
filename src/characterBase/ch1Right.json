@@ -9,5 +9,7 @@
     "speed": 5,
     "attack": 10,
     "bonus": 50,
-    "bonusColor": "black"
+    "bonusColor": "black",
+
+    "actions": ["attack", "block"]
 }

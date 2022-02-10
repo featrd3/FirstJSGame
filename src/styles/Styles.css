@@ -70,4 +70,11 @@ margin:10px;
 
 .actionsTable{
     background-color: rgb(75, 77, 75);
+    padding: 10px;
+    margin: 10px;
+}
+
+.actionsTable:hover{
+    background-color: rgb(121, 124, 121);
+
 }

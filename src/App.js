@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import Scene from './components/Scene'
 import TurnOrder from './components/TurnOrder'
-import Actions from './Actions'
+import Actions from './components/Actions'
 import CharacterLoader from './characterBase/CharacterLoader'
 
 
