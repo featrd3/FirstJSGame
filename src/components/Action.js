@@ -1,6 +1,6 @@
 import ActionLoader from "../characterActions/ActionLoader"
 
-const Action = ({ action, teamLeft, teamRight, turnOrder, onClick}) => {
+const Action = ({ action, activeChar, teamLeft, teamRight, turnOrder, turnPass}) => {
 
     return (
         <div className = "actionsTable" onClick={prepareActionLoader}>
@@ -13,7 +13,10 @@ const Action = ({ action, teamLeft, teamRight, turnOrder, onClick}) => {
 
     function prepareActionLoader() {
     
-        ActionLoader(action, teamLeft, teamRight, turnOrder)
+        ActionLoader(action, activeChar, teamLeft, teamRight, turnOrder);
+        
+
+        turnPass()
     
     }
 }

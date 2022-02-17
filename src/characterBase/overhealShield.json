@@ -7,7 +7,7 @@
     "hpLimits": [33.33,66.66],
 
     "speed": 3,
-    "attack": 10,
+    "attack": 1,
     "bonus": 10,
     "bonusColor": "blue",
 

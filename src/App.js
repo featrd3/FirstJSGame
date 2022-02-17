@@ -11,20 +11,20 @@ function App() {
 
   const [teamLCharacters, setTeamLCharacters] = useState([
     {
-    id:1,
+    id:1, team:0,
     ...CharacterLoader('overhealShield')
     },
     { 
-    id:2,
+    id:2, team:0,
     ...CharacterLoader('ch2Left')
     }
   ])
   const [teamRCharacters, setTeamRCharacters] = useState([{
-    id:3,
+    id:3, team:1,
     ...CharacterLoader('ch1Right')
     },
     {
-    id:4,
+    id:4, team:1,
     ...CharacterLoader('ch2Right')
     }
   ])
@@ -57,8 +57,8 @@ function App() {
       
       <Scene teamLeft = {teamLCharacters} teamRight = {teamRCharacters} turnOrder = {turnOrder}/>
 
-      <Actions teamLeft = {teamLCharacters} teamRight = {teamRCharacters} turnOrder = {turnOrder}/>
-
+      <Actions teamLeft = {teamLCharacters} teamRight = {teamRCharacters} turnOrder = {turnOrder} turnPass = {turnHandler}/>
+    
     </div>
 
 )

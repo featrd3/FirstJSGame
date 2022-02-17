@@ -1,6 +1,6 @@
 import Action from "./Action";
 
-const Actions = ({ teamLeft, teamRight, turnOrder}) => {
+const Actions = ({ teamLeft, teamRight, turnOrder, turnPass}) => {
 
     var charBase = [...teamLeft,...teamRight];
     var activeChar = charBase.filter(i => i.id === turnOrder[0])[0];
@@ -8,7 +8,7 @@ const Actions = ({ teamLeft, teamRight, turnOrder}) => {
     return (
         <div className="actionsBorder">
                 
-           {activeChar.actions.map((action) => <Action key = {action} action = {action} teamLeft = {teamLeft} teamRight = {teamRight} />)}
+           {activeChar.actions.map((action) => <Action key = {action} action = {action} activeChar={activeChar} teamLeft = {teamLeft} teamRight = {teamRight} turnPass = {turnPass} />)}
             
         </div>
     )

@@ -1,23 +1,30 @@
-const ActionLoader = (actionName, teamLeft, teamRight, turnOrder) => {
+const ActionLoader = (actionName, activeChar, teamLeft, teamRight, turnOrder) => {
+
+    var charBase = [...teamLeft,...teamRight];
 
     switch (actionName) { 
-        case 'attack': console.log("attack"); break;
+        case 'attack': attackAct(charBase, activeChar); break;
         case 'block': console.log("block"); break;
     }
-
-}
-
-const selectSingleTarget = () => {
-
-
+   return
 
 }
 /*
-const attack = () => {
-    targetID = 
-    targetID.HP = targetID.HP - attacker.Attack
-}
+const selectSingleTarget = () => {
 
+    var charBase = [...teamLeft,...teamRight];
+    return (charBase[0])
+}
+*/
+const attackAct = (charBase, activeChar) => {
+
+    var target = charBase[0];
+
+    target.currentHp = target.currentHp - activeChar.attack;
+    return (console.log(activeChar.attack))
+
+}
+/*
 const block = () => {
     targetID= selectTarget()
     targetID.HP = targetID.HP - attacker.Attack
